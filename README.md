@@ -1,2 +1,3 @@
 # yaqinkdr
-a newbie in coding that always improves his skill
+percobaan self bot lurr. sebagian kode dari PhoLine/SelfbotLine
+oke selamat mencoba
