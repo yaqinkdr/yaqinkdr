@@ -97,7 +97,7 @@ def bot(op):
             return
 #-------------------NOTIFIED_READ_MESSAGE----------------
         if op.type == 55:
-	    try:
+    try:
 	      group_id = op.param1
 	      user_id=op.param2
 	      subprocess.Popen('echo "'+ user_id+'|'+str(op.createdTime)+'" >> dataSeen/%s.txt' % group_id, shell=True, stdout=subprocess.PIPE, )
