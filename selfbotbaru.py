@@ -95,14 +95,6 @@ def bot(op):
 #--------------------END_OF_OPERATION--------------------
         if op.type == 0:
             return
-#-------------------NOTIFIED_READ_MESSAGE----------------
-        if op.type == 55:
-	try:
-	      group_id = op.param1
-	      user_id=op.param2
-	      subprocess.Popen('echo "'+ user_id+'|'+str(op.createdTime)+'" >> dataSeen/%s.txt' % group_id, shell=True, stdout=subprocess.PIPE, )
-	    except Exception as e:
-	      print e
 #------------------NOTIFIED_INVITE_INTO_ROOM-------------
         if op.type == 22:
             cl.leaveRoom(op.param1)
