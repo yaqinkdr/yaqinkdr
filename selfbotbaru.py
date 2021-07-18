@@ -112,11 +112,11 @@ def bot(op):
 
 #--------------NOTIFIED_INVITE_INTO_GROUP----------------
 
-	    if mid in op.param3:
-                if wait["AutoJoin"] == True:
-                    cl.acceptGroupInvitation(op.param1)
-                else:
-		    cl.rejectGroupInvitation(op.param1)
+	if mid in op.param3:
+            if wait["AutoJoin"] == True:
+                cl.acceptGroupInvitation(op.param1)
+            else:
+		cl.rejectGroupInvitation(op.param1)
 	    else:
                 if wait["AutoCancel"] == True:
 		    if op.param3 in admin:
