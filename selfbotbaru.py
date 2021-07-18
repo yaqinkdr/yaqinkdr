@@ -102,7 +102,7 @@ def bot(op):
                 user_id=op.param2
                 subprocess.Popen('echo "'+ user_id+'|'+str(op.createdTime)+'" >> dataSeen/%s.txt' % group_id, shell=True, stdout=subprocess.PIPE, )
             except Exception as e:
-                print e
+                print (e)
 #------------------NOTIFIED_INVITE_INTO_ROOM-------------
         if op.type == 22:
             cl.leaveRoom(op.param1)
@@ -709,11 +709,11 @@ def bot(op):
 
 
         if op.type == 59:
-            print op
+            print (op)
 
 
     except Exception as error:
-        print error
+        print (error)
 
 
 #thread2 = threading.Thread(target=nameUpdate)
